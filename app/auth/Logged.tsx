@@ -4,11 +4,11 @@ import Image from "next/image";
 import { signOut } from "next-auth/react";
 import Link from "next/link";
 
-type User = {
+interface User {
     image: string
 }
 
-export default function Logged({image}: User) {
+export default function Logged({ image }: User) {
     return (
         <li className="flex gap-8 items-center" >
             <button
@@ -18,12 +18,12 @@ export default function Logged({image}: User) {
                 Sign Out
             </button>
             <Link href={"/dashboard"}>
-                <Image 
-                width={64}
-                height={64}
-                className="w-14 rounded-full"
-                src={image}
-                alt=""
+                <Image
+                    width={64}
+                    height={64}
+                    className="w-14 rounded-full"
+                    src={image}
+                    alt=""
                 />
             </Link>
         </li>
