@@ -1,3 +1,6 @@
+"use client"
+import AddPosts from "./components/AddPosts";
+
 export default function Home() {
   return (
     <main>

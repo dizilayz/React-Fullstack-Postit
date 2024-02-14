@@ -7,7 +7,7 @@ export default function Login() {
         <li className="list-none" >
             <button
                 onClick={() => signIn()}
-                className=""
+                className="text-sm text-white bg-gray-700 py-2 px-6 rounded-xl disabled:opacity-25"
             >Sign in</button>
         </li>
     )
