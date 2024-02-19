@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 export default function CreatePost() {
     const [title, setTitle] = useState("");
     const [isDisabled, setIsDisabled] = useState(false);
-    let toastPostId: string;
+    const queryClient = useQueryClient();
 
     // Create a post
 
@@ -22,6 +22,7 @@ export default function CreatePost() {
         },
         onSuccess: (data) => {
             toast.success("Post has been made");
+            queryClient.invalidateQueries({queryKey: ['posts']})
             setTitle("");
             setIsDisabled(false);
         }

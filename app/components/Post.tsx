@@ -3,7 +3,15 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export default function Post({ avatar, name, title, id, comments }) {
+type PostProps = {
+    avatar: string
+    name: string
+    title: string
+    id: string
+    comments: string
+}
+
+export default function Post({ avatar, name, title, id, comments }: PostProps) {
     return (
         <div className="bg-white p-8 my-8">
             <div className="flex items-center gap-2" >
