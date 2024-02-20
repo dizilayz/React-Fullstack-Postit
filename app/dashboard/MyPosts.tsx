@@ -17,7 +17,6 @@ export default function MyPosts() {
         queryKey: ["auth-posts"]
     })
     if(isLoading) return <h1>Loading...</h1>
-    console.log(data);
     return (
         <div>
             <h1>My Data</h1>
@@ -31,7 +30,6 @@ export default function MyPosts() {
                 comments={post.Comment}
                 />
             ))}
-            <Toggle/>
         </div>
     )
 }
